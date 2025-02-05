@@ -50,5 +50,24 @@
             android:text="Right Button" />
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_btn_startact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_new_act"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start new Activity" />
+
+        <Button
+            android:id="@+id/btn_new_act_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start activity with data"/>
+
+    </LinearLayout>
 
 </LinearLayout>

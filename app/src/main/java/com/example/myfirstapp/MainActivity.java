@@ -1,5 +1,6 @@
 package com.example.myfirstapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView nTv_today_date;
     private Button mBtn_left_btn, mBtn_right_btn;
+
+    private Button mBtn_new_activity, mBtn_new_activity_data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +60,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mBtn_new_activity = (Button) findViewById(R.id.btn_new_act);
 
+        mBtn_new_activity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent_2nd_activity = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent_2nd_activity);
+            }
+        });
+
+        mBtn_new_activity_data = (Button) findViewById(R.id.btn_new_act_data);
+
+        mBtn_new_activity_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent_3rd_activity = new Intent(MainActivity.this, ThirdActivity.class);
+                intent_3rd_activity.putExtra("new_data", "This is data from Main Activity");
+
+                startActivity(intent_3rd_activity);
+            }
+        });
 
     }
 
