@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button mBtn_new_activity, mBtn_new_activity_data;
 
+    private Button mBtn_snsr_data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +81,16 @@ public class MainActivity extends AppCompatActivity {
                 intent_3rd_activity.putExtra("new_data", "This is data from Main Activity");
 
                 startActivity(intent_3rd_activity);
+            }
+        });
+
+        mBtn_snsr_data = (Button) findViewById(R.id.btn_snsr_data);
+
+        mBtn_snsr_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent_4th_activity = new Intent(MainActivity.this, FourthActivity.class);
+                startActivity(intent_4th_activity);
             }
         });
 
