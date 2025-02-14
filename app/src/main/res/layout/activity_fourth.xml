@@ -20,6 +20,8 @@
         android:orientation="horizontal">
 
         <Button
+            android:tag="sensor_data"
+            android:id="@+id/first_sensor"
             android:layout_width="10dp"
             android:layout_height="100dp"
             android:layout_weight="1"
@@ -51,6 +53,8 @@
         android:orientation="horizontal">
 
         <Button
+            android:tag="sensor_data"
+            android:id="@+id/second_sensor"
             android:layout_width="10dp"
             android:layout_height="95dp"
             android:layout_weight="1"
@@ -73,4 +77,12 @@
             android:textSize="12dp" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:onClick="goBack"
+        android:padding="10dp"
+        android:text="Back" />
 </LinearLayout>

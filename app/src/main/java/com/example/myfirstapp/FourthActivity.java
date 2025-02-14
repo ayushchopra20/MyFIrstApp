@@ -1,8 +1,11 @@
 package com.example.myfirstapp;
 
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -13,6 +16,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class FourthActivity extends AppCompatActivity {
+
+    private Button mBtn_snsr_data, mBtn_snsr_data_two;
 
 
     @Override
@@ -60,6 +65,36 @@ public class FourthActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+        mBtn_snsr_data = (Button) findViewById(R.id.first_sensor);
+
+        mBtn_snsr_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent_fifth_activity = new Intent(FourthActivity.this, FifthActivity.class);
+                intent_fifth_activity.putExtra("new_sensor_data", "This is data to show accelerometer sensor data.");
+
+                startActivity(intent_fifth_activity);
+            }
+        });
+
+        mBtn_snsr_data_two = (Button) findViewById(R.id.second_sensor);
+
+        mBtn_snsr_data_two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent_fifth_activity = new Intent(FourthActivity.this, FifthActivity.class);
+                intent_fifth_activity.putExtra("new_sensor_data", "This is data to show proximity sensor.");
+
+                startActivity(intent_fifth_activity);
+            }
+        });
+
+    }
+
+    public void goBack(View view) {
+        finish(); // Close the current activity and go back to the previous one
     }
 
     // Method to display sensor details

@@ -13,4 +13,5 @@
         android:text="This is my second Activity"
         android:textSize="38dp"/>
 
+
 </LinearLayout>

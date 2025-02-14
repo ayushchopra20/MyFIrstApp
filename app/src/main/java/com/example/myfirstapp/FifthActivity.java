@@ -10,23 +10,27 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class ThirdActivity extends AppCompatActivity {
+public class FifthActivity extends AppCompatActivity {
 
-    private TextView mtv_showdata;
+    private TextView mtv_show_sens_data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_third);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.ll_3rd), (v, insets) -> {
+        setContentView(R.layout.activity_fifth);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.ll_5th), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        mtv_showdata = (TextView) findViewById(R.id.tv_new_data);
-        String new_data = String.valueOf(getIntent().getStringExtra("new_data"));
-        mtv_showdata.setText(new_data);
+
+        mtv_show_sens_data = (TextView) findViewById(R.id.tv_new_sens_data);
+        String new_data = String.valueOf(getIntent().getStringExtra("new_sensor_data"));
+        mtv_show_sens_data.setText(new_data);
+
+
     }
 
     public void goBack(View view) {

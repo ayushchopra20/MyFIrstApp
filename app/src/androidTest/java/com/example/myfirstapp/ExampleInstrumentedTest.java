@@ -1,26 +1,33 @@
-package com.example.myfirstapp;
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/ll_4th"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".FourthActivity"
+android:orientation="vertical"
+android:fadeScrollbars="false">
 
-import android.content.Context;
+    <TextView
+android:id="@+id/accelerometerSnsrDta"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:gravity="center"
+android:textSize="20dp" />
 
-import androidx.test.platform.app.InstrumentationRegistry;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
+    <TextView
+android:id="@+id/proximitySnsrDta"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:gravity="center"
+android:textSize="20dp" />
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+    <Button
+android:id="@+id/button"
+android:layout_width="133dp"
+android:layout_height="wrap_content"
+android:text="Button" />
 
-import static org.junit.Assert.*;
 
-/**
- * Instrumented test, which will execute on an Android device.
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
-@RunWith(AndroidJUnit4.class)
-public class ExampleInstrumentedTest {
-    @Test
-    public void useAppContext() {
-        // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.myfirstapp", appContext.getPackageName());
-    }
-}
+</LinearLayout>
