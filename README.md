@@ -24,9 +24,9 @@ To dynamically update sensor data, the following logic is implemented in MainAct
 
 Features Implemented:
 
-✅ Organized sensor data in a table layout.
-✅ Dynamically updated sensor data using Java/Kotlin.
-✅ Improved UI readability by structuring the data properly.
+✅ Organized sensor data in a table layout.<br>
+✅ Dynamically updated sensor data using Java/Kotlin.<br>
+✅ Improved UI readability by structuring the data properly.<br>
 
 Future Enhancements:
 
