@@ -35,8 +35,6 @@ public class FourthActivity extends AppCompatActivity {
         TextView accelerometerSnsrDta = findViewById(R.id.accelerometerSnsrDta);
         TextView proximitySnsrDta = findViewById(R.id.proximitySnsrDta);
 
-
-
         // Get the list of available sensors
 //        List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ALL);
         StringBuilder sensorInfo = new StringBuilder();
@@ -45,20 +43,6 @@ public class FourthActivity extends AppCompatActivity {
         String proximityData = String.valueOf(displaySensorDetails(sensorInfo, "Proximity", proximity));
         accelerometerSnsrDta.setText(accelerometerData);
         proximitySnsrDta.setText(proximityData);
-
-        // Get the TextView and display sensor details
-
-//        for (Sensor sensor : sensorList) {
-//            sensorInfo.append("Name: ").append(sensor.getName()).append("\n");
-//            sensorInfo.append("Type: ").append(sensor.getStringType()).append("\n");
-//            sensorInfo.append("Vendor: ").append(sensor.getVendor()).append("\n");
-//            sensorInfo.append("Version: ").append(sensor.getVersion()).append("\n");
-//            sensorInfo.append("Maximum Range: ").append(sensor.getMaximumRange()).append("\n");
-//            sensorInfo.append("Resolution: ").append(sensor.getResolution()).append("\n");
-//            sensorInfo.append("Power: ").append(sensor.getPower()).append(" mA\n");
-//            sensorInfo.append("---------------------------------\n");
-//        }
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.ll_4th), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MyFIrstApp"
         tools:targetApi="31">
         <activity
+            android:name=".SensorGraphView"
+            android:exported="false" />
+        <activity
             android:name=".FifthActivity"
             android:exported="false" />
         <activity
